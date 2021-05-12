@@ -13,8 +13,10 @@ function changeTheme() {
   if (document.body.classList.contains(Theme.LIGHT)) {
     document.body.classList.replace(Theme.LIGHT, Theme.DARK);
     localStorage.setItem('theme', Theme.DARK);
-  } else document.body.classList.replace(Theme.DARK, Theme.LIGHT);
-  localStorage.setItem('theme', Theme.LIGHT);
+  } else {
+    document.body.classList.replace(Theme.DARK, Theme.LIGHT);
+    localStorage.setItem('theme', Theme.LIGHT);
+  }
 }
 
 const currentTheme = localStorage.getItem('theme');
